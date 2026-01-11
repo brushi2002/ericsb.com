@@ -11,7 +11,7 @@ import { sourceLinks } from "./source";
 
 export const identity: Identity = {
   name: "Eric B",
-  logo: "/img/EB_HeadAvatar.jpeg",
+  logo: "/ericsb.com/img/EB_HeadAvatar.jpeg",
   email: "eric@ericsb.com",
 };
 
@@ -39,7 +39,7 @@ export const navBarLinks: NavBarLink[] = [
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Vinit Shahdeo | Portfolio",
+    title: "Eric B | Portfolio",
     description:
       "Explore the portfolio of Vinit Shahdeo, a Lead Software Engineer specializing in building scalable, secure, and performant backend microservices in Node.js and Go.",
     image: openGraphImage,

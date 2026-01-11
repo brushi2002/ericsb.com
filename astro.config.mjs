@@ -9,6 +9,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://brushi2002.github.io",
+  base: '/ericsb.com',
   integrations: [
     tailwind(),
     icon(),
