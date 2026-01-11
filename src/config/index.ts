@@ -3,6 +3,7 @@ import type {
   Identity,
   AboutPageContent,
   ProjectPageContent,
+  FeaturedPageContent,
   HomePageContent,
 } from "../types/config";
 
@@ -147,6 +148,19 @@ export const aboutPageContent: AboutPageContent = {
     description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`,
     links: socialLinks,
   },
+};
+
+// Featured (/featured)
+export const featuredPageContent: FeaturedPageContent = {
+  seo: {
+    title: "Featured Articles, Stories & Interviews | Vinit Shahdeo",
+    description:
+      "Explore a curated collection of articles, insightful stories, and exclusive interviews with Vinit Shahdeo, a Software Engineer and a GitHub Star from Bengaluru, India.",
+    image: openGraphImage,
+    domain: "vinitshahdeo.com",
+    url: "https://vinitshahdeo.com/featured",
+  },
+  subtitle: "Thoughts, stories, and interviews.",
 };
 
 // Now (/now)
