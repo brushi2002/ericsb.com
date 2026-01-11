@@ -7,7 +7,6 @@ import type {
 } from "../types/config";
 
 import { socialLinks, homeSocialLinks } from "./social";
-import { sourceLinks } from "./source";
 
 export const identity: Identity = {
   name: "Eric B",
