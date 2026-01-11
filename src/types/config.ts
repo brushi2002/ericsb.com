@@ -102,9 +102,10 @@ export type Project = {
 };
 
 export type ProjectPageContent = {
+  title: string;
   seo: SEOInfo;
   subtitle: string;
-  projects: Project[];
+  //projects: Project[];
 };
 
 export type FeaturedPageContent = {

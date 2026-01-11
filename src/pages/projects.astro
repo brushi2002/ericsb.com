@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { projectPageContent } from "../config";
+import ResumeItem from "../components/ResumeItem.astro";
+import SocialLinkBox from "../components/SocialLinkBox.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout seo={projectPageContent.seo}>
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="text-2xl mb-1">About</h1>
+    <p class="opacity-60 mb-10 subtitle">{projectPageContent.subtitle}</p>
+    <div class="mb-14">
+      <p class="mb-5 sm:text-left">
+        Hello, I'm a Software Engineer Leader who has a passion for technology that makes sense. 
+      </p>
+      <p class="mb-5 sm:text-left">
+        My journey started with a simple curiosity — how Facebook worked — and
+        it’s been an exciting ride ever since. I graduated from <a
+          class="gradient-link"
+          href="https://vit.ac.in/"
+          target="_blank">VIT Vellore</a
+        >, worked as a Software Engineer II at <a
+          class="gradient-link"
+          href="https://www.postman.com/"
+          target="_blank">Postman</a
+        > where I built products like <a
+          href="https://www.postman.com/product/postman-interceptor"
+          class="underline-hover"
+          target="_blank">Interceptor</a
+        > and <a
+          href="https://www.postman.com/product/integrations"
+          class="underline-hover"
+          target="_blank">Integrations</a
+        >, and later contributed to scaling neo-banking solutions at <a
+          class="gradient-link"
+          href="https://www.novo.co/"
+          target="_blank">Novo</a
+        >.<br /><br />From building core banking systems and ACH rails to
+        working on engineering maturity and payments infrastructure, it’s been a
+        deeply rewarding experience at Novo. Discover more about my Postman <a
+          href="https://vinitshahdeo.dev/saying-goodbye-to-postman"
+          target="_blank"
+          class="underline-hover">journey</a
+        >, my time at <a
+          href="https://vinitshahdeo.dev/celebrating-one-year-at-novo-software-engineer-experience"
+          target="_blank"
+          class="underline-hover">Novo</a
+        >, and valuable <a
+          href="https://vinitshahdeo.dev/10-lessons-learned-as-software-engineer-at-postman"
+          target="_blank"
+          class="underline-hover">lessons</a
+        > I've gathered along the way.<br /><br />
+
+        Today, I’m leading engineering efforts at <a
+          href="https://zzazz.com"
+          target="_blank"
+          class="gradient-link">zzazz</a
+        >, an AI startup where we’re building the world’s first <i
+          >Large Pricing Model</i
+        > (LPM) — turning online content into valuable, tradable assets. Here, I’m
+        focused on building scalable microservices, designing event-driven platforms,
+        and architecting APIs that power AI-driven pricing at internet scale. It’s
+        a thrilling new chapter where deep tech meets real-world impact.
+      </p>
+    </div>
+  </section>
+
+  <!--
+   <section class="my-20 mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <h2 class="mb-8 sm:mb-0 opacity-60 navbar">Work</h2>
+    <div>
+      <div class="mb-6">
+        My tech toolbox includes <strong>Node.js</strong>, <strong>Go</strong>, <strong
+          >Kafka</strong
+        >, <strong>GraphQL</strong>, <strong>REST</strong>, <strong>AWS</strong
+        >, and much more – but my true love? APIs, of course!
+      </div>
+      <div class="grid grid-cols-1 group social-bar">
+        {aboutPageContent.work.items.map((item) => <ResumeItem {...item} />)}
+      </div>
+    </div>
+  </section>
+  <section class="mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
+    <h2 class="mb-8 sm:mb-0 opacity-60 navbar">Connect</h2>
+    <div>
+      <div class="mb-6">
+        Come find me on 𝕏 (<a
+          href="https://twitter.com/Vinit_Shahdeo"
+          target="_blank"
+          class="underline-hover">Twitter</a
+        >) and <a
+          href="https://www.linkedin.com/in/vinitshahdeo"
+          target="_blank"
+          class="underline-hover">LinkedIn</a
+        > – I'm excited to connect! You can explore my professional side on <a
+          href="https://peerlist.io/vinitshahdeo"
+          target="_blank"
+          class="underline-hover">Peerlist</a
+        >. And if you're curious about my thoughts, swing by my blog
+        <a class="gradient-link" href="https://vinitshahdeo.dev" target="_blank"
+          >vinitshahdeo.dev</a
+        >.
+      </div>
+      <div class="grid grid-cols-2 gap-2 group social-bar">
+        {
+          aboutPageContent.connect.links.map((item) => (
+            <SocialLinkBox {...item} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+-->
+</Layout>

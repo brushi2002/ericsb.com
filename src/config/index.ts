@@ -2,18 +2,17 @@ import type {
   NavBarLink,
   Identity,
   AboutPageContent,
-  FeaturedPageContent,
+  ProjectPageContent,
   HomePageContent,
-  NowPageContent,
 } from "../types/config";
 
 import { socialLinks, homeSocialLinks } from "./social";
 import { sourceLinks } from "./source";
 
 export const identity: Identity = {
-  name: "Vinit Shahdeo",
-  logo: "/img/vinitshahdeo.png",
-  email: "vinishahdeo@gmail.com",
+  name: "Eric B",
+  logo: "/img/EB_HeadAvatar.jpeg",
+  email: "eric@ericsb.com",
 };
 
 export const openGraphImage: string = "/img/vinitshahdeo-portfolio.jpg";
@@ -28,20 +27,12 @@ export const navBarLinks: NavBarLink[] = [
     url: "/about",
   },
   {
-    title: "Now",
-    url: "/now",
+    title: "Projects",
+    url: "/projects"
   },
   {
-    title: "Featured",
-    url: "/featured",
-  },
-  {
-    title: "Practices",
-    url: "/practices",
-  },
-  {
-    title: "Books",
-    url: "/books",
+    title: "Blog",
+    url: "/blog",
   },
 ];
 
@@ -159,32 +150,18 @@ export const aboutPageContent: AboutPageContent = {
   },
 };
 
-// Featured (/featured)
-export const featuredPageContent: FeaturedPageContent = {
-  seo: {
-    title: "Featured Articles, Stories & Interviews | Vinit Shahdeo",
-    description:
-      "Explore a curated collection of articles, insightful stories, and exclusive interviews with Vinit Shahdeo, a Software Engineer and a GitHub Star from Bengaluru, India.",
-    image: openGraphImage,
-    domain: "vinitshahdeo.com",
-    url: "https://vinitshahdeo.com/featured",
-  },
-  subtitle: "Thoughts, stories, and interviews.",
-};
-
 // Now (/now)
-export const nowPageContent: NowPageContent = {
+export const projectPageContent: ProjectPageContent = {
   seo: {
-    title: "What I'm doing now | Vinit Shahdeo",
+    title: "Here is a list of my current Projects",
     description:
-      "A updated log of what I'm building, learning, reading or exploring at different points of time.",
+      "A updated log of what I'm building",
     image: openGraphImage,
-    domain: "vinitshahdeo.com",
-    url: "https://vinitshahdeo.com/now",
+    domain: "ericsb.com",
+    url: "https://ericsb.com/projects",
   },
   title: "Now (Recently)",
   subtitle: "Where I’m at, what I’m focused on, and what I’m not.",
-  sourceLinks,
 };
 
 export * from "./music";
