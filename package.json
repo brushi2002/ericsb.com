@@ -2,12 +2,12 @@
   "name": "ericsb-com",
   "type": "module",
   "author": {
-    "name": "Vinit Shahdeo",
-    "email": "vinitshahdeo@gmail.com",
-    "url": "https://github.com/vinitshahdeo"
+    "name": "Eric Berryman",
+    "email": "eric@ericsb.com",
+    "url": "https://github.com/brushi2002"
   },
   "license": "MIT",
-  "description": "Minimal Portfolio for Software Engineer using Astro and Tailwind CSS | Made with ❤️ by Vinit Shahdeo",
+  "description": "Minimal Portfolio for Software Engineer using Astro and Tailwind CSS",
   "repository": {
     "type": "git",
     "url": "https://github.com/vinitshahdeo/portfolio.git"

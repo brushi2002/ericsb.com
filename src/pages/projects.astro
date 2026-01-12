@@ -1,116 +1,142 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { projectPageContent } from "../config";
-import ResumeItem from "../components/ResumeItem.astro";
-import SocialLinkBox from "../components/SocialLinkBox.astro";
 import { Icon } from "astro-icon/components";
+
+const projectsPageContent = {
+  seo: {
+    title: "Projects I'm currently working on",
+    description:
+      "List of Personal Projects that keep me fresh and interested",
+    image: "",
+    url: "https://vinitshahdeo.dev/books",
+    domain: "vinitshahdeo.dev",
+  },
+};
+
+const projectCategories = [
+  {
+    title: "Development Projects",
+    description: "Personal Projects that are fun and help keep my skillset up to date",
+    icon: "mdi:code-braces",
+    projects: [
+      {
+        title: "Rally Rank",
+        subtitle: "Mobile application to Manage small tennis leagues/ladders",
+        author: "Eric B",
+        description:
+          "React Native Application to Manage Small tennis leagues/ladders. Easy to use and available in both the Google Play Store and the Apple App Store",
+        url:
+          "rally-rank.com",
+        completed: true,
+      },
+      {
+        title: "Option AI",
+        subtitle: "An Old Guys Journey with FI",
+        author: "Eric B",
+        description:
+          "AI Agent that can identify Put/Credit Spreads. Buidl",
+        url:
+          "None Yet",
+        completed: true,
+      },
+    ],
+  },
+  {
+    title: "Volunteer Efforts",
+    description: "Things I'm volunteering for or working to give back",
+    icon: "mdi:server-network",
+    projects: [
+      {
+        title: "The League of Amazing Programmers",
+        subtitle: "Teaching, Educating, Tutoring",
+        description:
+          "Organization that hosts classes in Python, Java, and Robotics",
+        url:
+          "https://www.jointheleague.org/",
+        completed: false,
+      },
+            {
+        title: "Second Half Stack",
+        subtitle: "Community Building",
+        description:
+          "Community",
+        url:
+          "https://www.jointheleague.org/",
+        completed: false,
+      }
+    ],
+  },
+];
 ---
 
-<Layout seo={projectPageContent.seo}>
+<Layout seo={projectsPageContent.seo}>
   <section class="mt-10 max-w-2xl mx-auto px-6">
-    <h1 class="text-2xl mb-1">About</h1>
-    <p class="opacity-60 mb-10 subtitle">{projectPageContent.subtitle}</p>
-    <div class="mb-14">
-      <p class="mb-5 sm:text-left">
-        Hello, I'm a Software Engineer Leader who has a passion for technology that makes sense. 
+    <div class="mb-12">
+      <h1 class="text-2xl mb-1">Projects I'm working on</h1>
+      <p class="opacity-60 mb-10 subtitle">
+        Click on the link to find out more about the project
       </p>
-      <p class="mb-5 sm:text-left">
-        My journey started with a simple curiosity — how Facebook worked — and
-        it’s been an exciting ride ever since. I graduated from <a
-          class="gradient-link"
-          href="https://vit.ac.in/"
-          target="_blank">VIT Vellore</a
-        >, worked as a Software Engineer II at <a
-          class="gradient-link"
-          href="https://www.postman.com/"
-          target="_blank">Postman</a
-        > where I built products like <a
-          href="https://www.postman.com/product/postman-interceptor"
-          class="underline-hover"
-          target="_blank">Interceptor</a
-        > and <a
-          href="https://www.postman.com/product/integrations"
-          class="underline-hover"
-          target="_blank">Integrations</a
-        >, and later contributed to scaling neo-banking solutions at <a
-          class="gradient-link"
-          href="https://www.novo.co/"
-          target="_blank">Novo</a
-        >.<br /><br />From building core banking systems and ACH rails to
-        working on engineering maturity and payments infrastructure, it’s been a
-        deeply rewarding experience at Novo. Discover more about my Postman <a
-          href="https://vinitshahdeo.dev/saying-goodbye-to-postman"
-          target="_blank"
-          class="underline-hover">journey</a
-        >, my time at <a
-          href="https://vinitshahdeo.dev/celebrating-one-year-at-novo-software-engineer-experience"
-          target="_blank"
-          class="underline-hover">Novo</a
-        >, and valuable <a
-          href="https://vinitshahdeo.dev/10-lessons-learned-as-software-engineer-at-postman"
-          target="_blank"
-          class="underline-hover">lessons</a
-        > I've gathered along the way.<br /><br />
-
-        Today, I’m leading engineering efforts at <a
-          href="https://zzazz.com"
-          target="_blank"
-          class="gradient-link">zzazz</a
-        >, an AI startup where we’re building the world’s first <i
-          >Large Pricing Model</i
-        > (LPM) — turning online content into valuable, tradable assets. Here, I’m
-        focused on building scalable microservices, designing event-driven platforms,
-        and architecting APIs that power AI-driven pricing at internet scale. It’s
-        a thrilling new chapter where deep tech meets real-world impact.
+      <p class="text-large opacity-80 mb-6">
+        A List of Projects and volunteer efforts that keep me interested an engaged. Also I like to keep my skillset up to date by working on these projects.
       </p>
     </div>
-  </section>
 
-  <!--
-   <section class="my-20 mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60 navbar">Work</h2>
-    <div>
-      <div class="mb-6">
-        My tech toolbox includes <strong>Node.js</strong>, <strong>Go</strong>, <strong
-          >Kafka</strong
-        >, <strong>GraphQL</strong>, <strong>REST</strong>, <strong>AWS</strong
-        >, and much more – but my true love? APIs, of course!
-      </div>
-      <div class="grid grid-cols-1 group social-bar">
-        {aboutPageContent.work.items.map((item) => <ResumeItem {...item} />)}
-      </div>
+    {
+      projectCategories.map((category) => (
+        <div class="mb-12">
+          <div class="flex items-center gap-3 mb-6">
+            <Icon
+              name={category.icon}
+              width={24}
+              height={24}
+              class="text-[#ffe895]"
+            />
+            <div>
+              <h2 class="text-[#ffe895] opacity-90">{category.title}</h2>
+              <p class="opacity-60 text-small mt-1">{category.description}</p>
+            </div>
+          </div>
+
+          <div class="grid gap-4">
+            {category.projects.map((project) => (
+              <div class="group p-6 bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg hover:border-[#00abda] transition-all duration-300 hover:bg-[#2f2f2f]">
+                <div class="flex items-start gap-4">
+                  <div class="flex-1">
+                    <p class="text-small opacity-70 mb-2">
+                            {project.title}
+                          </p>
+                    
+                    <p class="opacity-80 text-small leading-relaxed mb-3">
+                      {project.description}
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-small gradient-link hover:opacity-80 transition-opacity"
+                      >
+                        <span>View Project</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+
+    <div class="mt-8 text-center">
+      <p class="opacity-60 text-small">
+        If you'd like to discuss these projects or talk about what you are working on
+        <a
+          href="https://www.linkedin.com/in/ericsberryman/"
+          class="gradient-link">I'd love to chat about them!</a
+        >
+      </p>
     </div>
   </section>
-  <section class="mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60 navbar">Connect</h2>
-    <div>
-      <div class="mb-6">
-        Come find me on 𝕏 (<a
-          href="https://twitter.com/Vinit_Shahdeo"
-          target="_blank"
-          class="underline-hover">Twitter</a
-        >) and <a
-          href="https://www.linkedin.com/in/vinitshahdeo"
-          target="_blank"
-          class="underline-hover">LinkedIn</a
-        > – I'm excited to connect! You can explore my professional side on <a
-          href="https://peerlist.io/vinitshahdeo"
-          target="_blank"
-          class="underline-hover">Peerlist</a
-        >. And if you're curious about my thoughts, swing by my blog
-        <a class="gradient-link" href="https://vinitshahdeo.dev" target="_blank"
-          >vinitshahdeo.dev</a
-        >.
-      </div>
-      <div class="grid grid-cols-2 gap-2 group social-bar">
-        {
-          aboutPageContent.connect.links.map((item) => (
-            <SocialLinkBox {...item} />
-          ))
-        }
-      </div>
-    </div>
-  </section>
--->
 </Layout>

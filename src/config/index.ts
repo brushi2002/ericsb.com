@@ -20,19 +20,19 @@ export const openGraphImage: string = "/img/vinitshahdeo-portfolio.jpg";
 export const navBarLinks: NavBarLink[] = [
   {
     title: "Home",
-    url: "/",
+    url: "/ericsb.com/",
   },
   {
     title: "About",
-    url: "/about",
+    url: "/ericsb.com/about",
   },
   {
     title: "Projects",
-    url: "/projects"
+    url: "/ericsb.com/projects"
   },
   {
     title: "Blog",
-    url: "/blog",
+    url: "/ericsb.com/blog",
   },
 ];
 
@@ -41,10 +41,10 @@ export const homePageContent: HomePageContent = {
   seo: {
     title: "Eric B | Portfolio",
     description:
-      "Explore the portfolio of Vinit Shahdeo, a Lead Software Engineer specializing in building scalable, secure, and performant backend microservices in Node.js and Go.",
+      "Explore the portfolio of Eric Berryman, a Software Engineering Leader specializing in building scalable, High Performing Teams.",
     image: openGraphImage,
-    domain: "vinitshahdeo.com",
-    url: "https://vinitshahdeo.com",
+    domain: "ericsb.com",
+    url: "https://linkedin.com/in/ericsberryman",
   },
   role: "Engineering Lead",
   company: "ZZAZZ",
@@ -54,28 +54,16 @@ export const homePageContent: HomePageContent = {
   homeSocialLinks: homeSocialLinks,
   links: [
     {
-      title: "Peerlist",
-      url: "https://peerlist.io/vinitshahdeo",
-      icon: "mdi:link-circle",
-      external: true,
-    },
-    {
       title: "About",
-      url: "/about",
+      url: "/ericsb.com/about",
       icon: "mdi:account-circle",
     },
     {
       title: "Blog",
-      url: "https://vinitshahdeo.dev/",
+      url: "https://substack.com/@oldguyfi?",
       icon: "mdi:share-circle",
       external: true,
-    },
-    {
-      title: "Source",
-      url: "https://github.com/vinitshahdeo/portfolio",
-      icon: "mdi:github",
-      external: true,
-    },
+    }
   ],
 };
 
