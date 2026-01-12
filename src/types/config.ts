@@ -64,26 +64,6 @@ export type MusicPlaylist = {
 
 export type AboutPageContent = {
   seo: SEOInfo;
-  subtitle: string;
-  about: {
-    description: string;
-    image_l: {
-      url: string;
-      alt: string;
-    };
-    image_r: {
-      url: string;
-      alt: string;
-    };
-  };
-  work: {
-    description: string;
-    items: ResumeItem[];
-  };
-  connect: {
-    description: string;
-    links: SocialLink[];
-  };
 };
 
 export type NowPageContent = {
